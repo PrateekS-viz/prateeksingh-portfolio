@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prateek Singh — Analytics & BI Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1E2A3A;
+    --teal: #1D9E75;
+    --teal-light: #E1F5EE;
+    --teal-mid: #0F6E56;
+    --surface: #F4F6F8;
+    --white: #ffffff;
+    --text: #1E2A3A;
+    --muted: #5a6a7a;
+    --border: rgba(30,42,58,0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 56px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--white);
+    letter-spacing: 0.2px;
+  }
+
+  .nav-logo span { color: var(--teal); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--teal); }
+
+  .nav-cta {
+    background: var(--teal);
+    color: var(--white) !important;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--teal-mid) !important; color: var(--white) !important; }
+
+  /* ── SECTIONS ── */
+  section { scroll-margin-top: 56px; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+
+  .section-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+  }
+
+  .teal-rule {
+    width: 36px;
+    height: 3px;
+    background: var(--teal);
+    border-radius: 2px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── HOME ── */
+  #home {
+    background: var(--navy);
+    padding: 5rem 0 4rem;
+  }
+
+  .home-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .home-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--teal);
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #2a3a4e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--teal);
+  }
+
+  .home-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .home-text h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 44px;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 0.6rem;
+  }
+
+  .home-text h1 em {
+    color: var(--teal);
+    font-style: normal;
+  }
+
+  .home-subtitle {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.5px;
+    margin-bottom: 1.25rem;
+  }
+
+  .home-desc {
+    font-size: 15px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.75;
+    max-width: 560px;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-mba {
+    display: inline-block;
+    background: rgba(29,158,117,0.15);
+    border: 1px solid rgba(29,158,117,0.35);
+    color: var(--teal);
+    font-size: 13px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 1.75rem;
+  }
+
+  .social-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .social-btn:hover { opacity: 0.85; }
+  .btn-teal { background: var(--teal); color: var(--white); }
+  .btn-outline { border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.8); }
+
+  /* ── WHAT I DO ── */
+  #what-i-do {
+    background: var(--surface);
+    padding: 4rem 0;
+  }
+
+  .cards-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .do-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    border: 0.5px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .do-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(30,42,58,0.08);
+  }
+
+  .do-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--teal-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .do-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .do-card p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── STATS ── */
+  .stats-strip {
+    background: var(--navy);
+    padding: 3rem 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    text-align: center;
+  }
+
+  .stat-item {
+    padding: 0 1rem;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--teal);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.4;
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    padding: 4.5rem 0;
+    background: var(--white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .bio-block p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .bio-block p strong { color: var(--navy); font-weight: 600; }
+  .bio-block p:last-child { margin-bottom: 0; }
+
+  .about-sidebar {}
+
+  .edu-list { display: flex; flex-direction: column; gap: 0; margin-bottom: 2rem; }
+
+  .edu-row {
+    display: flex;
+    gap: 12px;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid var(--border);
+    align-items: flex-start;
+  }
+
+  .edu-row:last-child { border-bottom: none; }
+
+  .edu-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+    line-height: 1.2;
+    flex-shrink: 0;
+  }
+
+  .edu-degree { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+  .edu-school { font-size: 12px; color: var(--teal); margin-bottom: 2px; }
+  .edu-detail { font-size: 11.5px; color: var(--muted); line-height: 1.45; }
+
+  .sidebar-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .cert-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .cert-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 12.5px;
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  .cert-tick {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+
+  .cert-sub { font-size: 11px; color: var(--muted); font-weight: 400; }
+
+  /* ── SKILLS ── */
+  #skills {
+    background: var(--surface);
+    padding: 4.5rem 0;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .skill-group {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 0.5px solid var(--border);
+  }
+
+  .skill-group-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--teal-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .skill-group-title span { font-size: 16px; }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill-tag {
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 11.5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 0.5px solid var(--border);
+    font-weight: 400;
+  }
+
+  .skill-tag.primary {
+    background: var(--teal-light);
+    color: var(--teal-mid);
+    border-color: rgba(29,158,117,0.2);
+    font-weight: 500;
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience {
+    background: var(--white);
+    padding: 4.5rem 0;
+  }
+
+  .exp-timeline { display: flex; flex-direction: column; gap: 0; }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 0.5px solid var(--border);
+    position: relative;
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  .exp-meta {}
+
+  .exp-company {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+
+  .exp-period {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .exp-location {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .exp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--teal);
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  .exp-content {}
+
+  .exp-role {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .exp-team {
+    font-size: 12px;
+    color: var(--teal);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .exp-bullets li {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.65;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--teal);
+  }
+
+  .exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 0.85rem;
+  }
+
+  .exp-tag {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: var(--teal-light);
+    color: var(--teal-mid);
+    font-weight: 500;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--navy);
+    padding: 4.5rem 0;
+  }
+
+  #contact .section-tag { color: var(--teal); }
+  #contact .section-heading { color: var(--white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .contact-desc {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  .contact-items { display: flex; flex-direction: column; gap: 14px; }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(29,158,117,0.15);
+    border: 1px solid rgba(29,158,117,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .contact-item a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .contact-item a:hover { color: var(--teal); }
+
+  .contact-availability {
+    background: rgba(29,158,117,0.1);
+    border: 1px solid rgba(29,158,117,0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .avail-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .avail-items { display: flex; flex-direction: column; gap: 10px; }
+
+  .avail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .avail-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111d29;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .home-text h1 { animation: fadeUp 0.6s ease both; }
+  .home-subtitle { animation: fadeUp 0.6s 0.1s ease both; }
+  .home-desc { animation: fadeUp 0.6s 0.2s ease both; }
+  .home-mba { animation: fadeUp 0.6s 0.25s ease both; }
+  .social-row { animation: fadeUp 0.6s 0.3s ease both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .home-inner { grid-template-columns: 1fr; text-align: center; }
+    .home-photo { margin: 0 auto; }
+    .home-desc { margin: 0 auto 1.5rem; }
+    .social-row { justify-content: center; }
+    .cards-3, .skills-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .exp-item { grid-template-columns: 1fr; }
+    .exp-meta { display: flex; gap: 1rem; align-items: center; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Prateek <span>Singh</span></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="social-btn btn-teal" style="font-size:13px; padding:7px 16px; border-radius:6px; text-decoration:none;">Get in touch</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-inner">
+    <div class="home-photo"><img src="https://drive.google.com/thumbnail?id=1HMs2RO8LbtvUZCwKqWZf-E9uoHcENXs5&sz=w400" alt="Prateek Singh"></div>
+    <div class="home-text">
+      <h1>Analytics &<br><em>BI Leader</em></h1>
+      <p class="home-subtitle">Data Strategy · Platform Governance · People Analytics · Technical Educator</p>
+      <p class="home-desc">10+ years building enterprise data platforms — from ETL pipelines and Medallion architecture to C-suite dashboards and analytics governance across HR, finance, and operations.</p>
+      <span class="home-mba">🎓 MBA Dean's Fellow — Kelley School of Business (Expected 2027)</span>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/prateeksingh22/" target="_blank" class="social-btn btn-teal">LinkedIn ↗</a>
+        <a href="/cdn-cgi/l/email-protection#53232132273636387d203a3d343b6161133c26273f3c3c387d303c3e" class="social-btn btn-outline"><span class="__cf_email__" data-cfemail="6d1d1f0c19080806431e04030a055f5f2d02181901020206430e0200">[email&#160;protected]</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Years of experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">16+</span>
+        <span class="stat-label">Dashboards delivered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">8,000+</span>
+        <span class="stat-label">Professionals trained</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1,000+</span>
+        <span class="stat-label">Stakeholders served</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Enterprise sources integrated</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">70%</span>
+        <span class="stat-label">Dashboard redundancy cut</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT I DO -->
+<section id="what-i-do">
+  <div class="container">
+    <div class="section-tag">What I do</div>
+    <div class="section-heading">Three things I do exceptionally well</div>
+    <div class="teal-rule"></div>
+    <div class="cards-3">
+      <div class="do-card">
+        <div class="do-icon">📊</div>
+        <h3>BI & Visualization</h3>
+        <p>Power BI, Tableau, and Microsoft Fabric dashboards built for C-suite, Finance, HR, and Operations — 16+ dashboards delivered across a 2,000+ employee organization.</p>
+      </div>
+      <div class="do-card">
+        <div class="do-icon">🏗️</div>
+        <h3>Data Engineering</h3>
+        <p>End-to-end ETL pipelines, Medallion architecture, and semantic model design across Azure, Databricks, and 8+ enterprise sources including Workday, Salesforce, Oracle, and IBM Db2.</p>
+      </div>
+      <div class="do-card">
+        <div class="do-icon">🎓</div>
+        <h3>Enablement & Leadership</h3>
+        <p>Curricula design, Community of Practice leadership, and analytics capability scaling — 400+ sessions delivered to 8,000+ professionals globally across 5+ cross-functional teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-tag">About me</div>
+    <div class="section-heading">A decade of BI — pipeline to boardroom</div>
+    <div class="teal-rule"></div>
+    <div class="about-grid">
+      <div class="bio-block">
+        <p>I'm an <strong>Analytics & BI Leader</strong> with 10+ years building the data infrastructure organisations run on — ETL pipelines, Medallion architecture, governance frameworks, and C-suite dashboards across HR, finance, and operations.</p>
+        <p>My edge is the <strong>full stack</strong>: I can architect a Bronze-to-Gold pipeline in Databricks, design the star schema, build the Power BI semantic model, and then walk a VP through the insights — all without a handoff. I've done this at Jackson National Life, Red Hat, and Infosys across Fortune 500 environments.</p>
+        <p>Before I was an engineer, I was an <strong>educator</strong>. Five years at Infosys designing BI curricula, running 400+ sessions, and building the analytics capability of 8,000+ professionals across three continents gave me a lens most data leaders don't have: I know how to make complex data <em>understandable</em>.</p>
+        <p>Currently pursuing an <strong>MBA (Dean's Fellow) at Kelley School of Business</strong>, Indiana University — specialising in Strategy & Product Leadership — because the best analytics leaders understand the business, not just the data.</p>
+        <div style="margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:13px; color:var(--muted);">📍 Lansing, MI — open to relocation</span>
+          <span style="font-size:13px; color:var(--teal); font-weight:500;">✦ Open to Analytics & BI Lead / Manager roles</span>
+        </div>
+      </div>
+      <div class="about-sidebar">
+        <div class="sidebar-label" style="margin-bottom:0.75rem;">Education</div>
+        <div class="edu-list">
+          <div class="edu-row">
+            <div class="edu-badge">Kelley</div>
+            <div>
+              <div class="edu-degree">MBA — Strategy & Leadership</div>
+              <div class="edu-school">Kelley School of Business, IU · 2025–2027</div>
+              <div class="edu-detail">Dean's Innovation Fellow · Kelley Momentum Scholar</div>
+            </div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-badge">GLA</div>
+            <div>
+              <div class="edu-degree">M.Tech, Computer Science</div>
+              <div class="edu-school">GLA University, India · 2016 · CGPA 8.61</div>
+              <div class="edu-detail">2 IEEE publications on NLP & automated requirements classification</div>
+            </div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-badge">UPTU</div>
+            <div>
+              <div class="edu-degree">B.Tech, Computer Science</div>
+              <div class="edu-school">UPTU, India · 2013</div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-label" style="margin-bottom:0.75rem; margin-top:1.5rem;">Certifications</div>
+        <div class="cert-list">
+          <div class="cert-row"><div class="cert-tick">✓</div><div><div>Power BI Data Analyst</div><div class="cert-sub">Microsoft PL-300</div></div></div>
+          <div class="cert-row"><div class="cert-tick">✓</div><div><div>Azure Fundamentals</div><div class="cert-sub">Microsoft AZ-900</div></div></div>
+          <div class="cert-row"><div class="cert-tick">✓</div><div><div>Azure Data Fundamentals</div><div class="cert-sub">Microsoft DP-900</div></div></div>
+          <div class="cert-row"><div class="cert-tick">✓</div><div><div>Security & Compliance</div><div class="cert-sub">Microsoft SC-900</div></div></div>
+          <div class="cert-row"><div class="cert-tick">✓</div><div><div>Presentation Skills</div><div class="cert-sub">Harvard ManageMentor</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-tag">Skills</div>
+    <div class="section-heading">Tools, platforms & expertise</div>
+    <div class="teal-rule"></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title"><span>📊</span> BI & Visualization</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Power BI</span>
+          <span class="skill-tag primary">Tableau</span>
+          <span class="skill-tag primary">Microsoft Fabric</span>
+          <span class="skill-tag">Business Objects</span>
+          <span class="skill-tag">QlikView</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><span>🔧</span> Data Engineering</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Azure Data Factory</span>
+          <span class="skill-tag primary">Azure Databricks</span>
+          <span class="skill-tag primary">Medallion Architecture</span>
+          <span class="skill-tag">SSIS</span>
+          <span class="skill-tag">Informatica</span>
+          <span class="skill-tag">ETL end-to-end</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><span>🗄️</span> Databases & Modelling</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">SQL (Advanced)</span>
+          <span class="skill-tag primary">Star / Multifact Schema</span>
+          <span class="skill-tag">Oracle DB</span>
+          <span class="skill-tag">IBM Db2</span>
+          <span class="skill-tag">Snowflake Schema</span>
+          <span class="skill-tag">PL/SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><span>☁️</span> Data Sources & Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Workday / HRIS</span>
+          <span class="skill-tag primary">Salesforce / CRM</span>
+          <span class="skill-tag">ERP / Finance</span>
+          <span class="skill-tag">SharePoint</span>
+          <span class="skill-tag">Mainframe</span>
+          <span class="skill-tag">GitHub</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><span>🏛️</span> Governance & Strategy</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Data Governance</span>
+          <span class="skill-tag primary">KPI Framework Design</span>
+          <span class="skill-tag">Metric Standardization</span>
+          <span class="skill-tag">Access Controls</span>
+          <span class="skill-tag">Workforce Analytics</span>
+          <span class="skill-tag">Agile Delivery</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><span>👥</span> Leadership & Enablement</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Team Coaching</span>
+          <span class="skill-tag primary">Curriculum Design</span>
+          <span class="skill-tag primary">Executive Presentation</span>
+          <span class="skill-tag">Community of Practice</span>
+          <span class="skill-tag">Change Management</span>
+          <span class="skill-tag">Cross-functional Leadership</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-tag">Experience</div>
+    <div class="section-heading">Where I've built things that matter</div>
+    <div class="teal-rule"></div>
+    <div class="exp-timeline">
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-company">Jackson National Life</div>
+          <div class="exp-period">Sep 2022 – Present</div>
+          <div class="exp-location">Lansing, MI</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Analytics & BI Lead — Sr. Data Visualization & Analytics Engineer</div>
+          <div class="exp-team">Data & AI · Governance · Platform Leadership</div>
+          <ul class="exp-bullets">
+            <li>Established enterprise analytics governance framework — metric definitions, access controls, and platform administration for Tableau Server and Power BI/Fabric — reducing dashboard redundancy by 70% and serving 1,000+ stakeholders across 8 departments.</li>
+            <li>Designed ETL pipelines and Medallion architecture (Bronze/Silver/Gold) across 8+ sources — Workday, Salesforce, Oracle, IBM Db2, Mainframe, ERP, SharePoint — using ADF and Databricks; built star, snowflake, and multifact schemas underpinning all enterprise BI models.</li>
+            <li>Built 6+ Power BI and 10+ Tableau dashboards for C-suite, Finance, Operations, and HR; served as L3 escalation lead — reducing pipeline failures and manual intervention by 80%.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Power BI</span>
+            <span class="exp-tag">Tableau</span>
+            <span class="exp-tag">Databricks</span>
+            <span class="exp-tag">ADF</span>
+            <span class="exp-tag">Microsoft Fabric</span>
+            <span class="exp-tag">Medallion</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-company">Red Hat Inc.</div>
+          <div class="exp-period">Aug 2021 – Apr 2022</div>
+          <div class="exp-location">Pune, India</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Business Intelligence Analyst II</div>
+          <div class="exp-team">Global Analytics · Workforce Reporting</div>
+          <ul class="exp-bullets">
+            <li>Delivered global Tableau dashboards linking learning outcomes to talent-pipeline ROI across APAC, EMEA, and North America — enabling end-to-end funnel analysis for 300+ program leaders.</li>
+            <li>Standardized KPIs, event definitions, and metadata across 3 regions, creating a single source of truth and eliminating duplicate measurement.</li>
+            <li>Directed work of 2 analysts; recognized with Red Hat Multiplier Award for cross-functional collaboration.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Tableau</span>
+            <span class="exp-tag">Global KPIs</span>
+            <span class="exp-tag">Workforce Analytics</span>
+            <span class="exp-tag">AWS Redshift</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-company">Infosys Limited</div>
+          <div class="exp-period">Dec 2016 – Aug 2021</div>
+          <div class="exp-location">Pune, India</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Technology Analyst — BI Education & Enablement Lead</div>
+          <div class="exp-team">Analytics Enablement · Curriculum · Oracle DB</div>
+          <ul class="exp-bullets">
+            <li>Designed full BI/analytics curricula from scratch — Power BI, SQL, data visualization — deployed on Infosys Springboard; delivered 400+ live and virtual sessions to 8,000+ professionals globally.</li>
+            <li>Managed Oracle DB administration for enterprise reporting environments; led QA/UAT across the full analytics development lifecycle.</li>
+            <li>Recognized with Infosys INSTA Awards (2018 & 2020) for innovation in learning analytics and training excellence.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Power BI</span>
+            <span class="exp-tag">Oracle DB</span>
+            <span class="exp-tag">SQL</span>
+            <span class="exp-tag">Cognos</span>
+            <span class="exp-tag">SSIS / SSRS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-tag">Contact</div>
+    <div class="section-heading">Let's talk data</div>
+    <div class="teal-rule" style="background:var(--teal);"></div>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-desc">I'm open to Analytics & BI Lead and Manager roles where I can own the data strategy, lead a team, and build reporting infrastructure that actually gets used. Based in Lansing, MI — open to relocation.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <a href="/cdn-cgi/l/email-protection#bececcdfcadbdbd590cdd7d0d9d68c8cfed1cbcad2d1d1d590ddd1d3"><span class="__cf_email__" data-cfemail="81f1f3e0f5e4e4eaaff2e8efe6e9b3b3c1eef4f5edeeeeeaafe2eeec">[email&#160;protected]</span></a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <a href="tel:+15175124813">+1 (517) 512-4813</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <a href="https://www.linkedin.com/in/prateeksingh22/" target="_blank">linkedin.com/in/prateeksingh22</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <a href="#">Lansing, MI — open to relocation</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-availability">
+        <div class="avail-title">What I'm open to</div>
+        <div class="avail-items">
+          <div class="avail-item"><div class="avail-dot"></div>Analytics & BI Manager / Lead roles</div>
+          <div class="avail-item"><div class="avail-dot"></div>Enterprise data strategy & governance</div>
+          <div class="avail-item"><div class="avail-dot"></div>Platform build-outs (Fabric, Databricks, ADF)</div>
+          <div class="avail-item"><div class="avail-dot"></div>C-suite dashboard & reporting programs</div>
+          <div class="avail-item"><div class="avail-dot"></div>Analytics enablement & team coaching</div>
+          <div class="avail-item"><div class="avail-dot"></div>Open to relocation from Lansing, MI</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Prateek Singh · Analytics & BI Leader · Built with purpose.
+</footer>
+
+<script>
+  function reportHeight() {
+    const height = document.documentElement.scrollHeight;
+    window.parent.postMessage({ type: 'resize', height: height }, '*');
+  }
+  window.addEventListener('load', reportHeight);
+  window.addEventListener('resize', reportHeight);
+  let count = 0;
+  const interval = setInterval(() => {
+    reportHeight();
+    count++;
+    if (count > 10) clearInterval(interval);
+  }, 500);
+</script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const observer = new I
